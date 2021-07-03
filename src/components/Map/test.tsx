@@ -1,4 +1,4 @@
-import { getByTitle, render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import Map from "."
 
 describe('<Map />', () => {
@@ -19,7 +19,7 @@ describe('<Map />', () => {
                 latitude: 0,
                 longitude: 0,
             }
-        } 
+        }
         const placeTwo = {
             id: '2',
             name: 'Reykjavik',
@@ -28,7 +28,7 @@ describe('<Map />', () => {
                 latitude: 129,
                 longitude: -50,
             }
-        } 
+        }
         render(<Map places={[place, placeTwo]} />)
 
         expect(screen.getByTitle(/petrópolis/i)).toBeInTheDocument()
