@@ -1,12 +1,11 @@
-# React Boilerplate
-This boilerplate uses:
+# Interactive Map using Leaflet
+
+This project is using leaflet to allow user to interact with the map, and each point of this map will be managed from GraphCMS. 
+
 * NextJS
 * Typescript
 * Styled components
-* PWA
-* Storybook
 * GraphQL
+* leafletjs
+* GraphCMS
 
-## Usage
-
-run `yarn create next-app -e https://github.com/sergioviniciuss/boilerplate` and follow instructions
