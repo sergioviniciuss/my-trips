@@ -11,7 +11,8 @@
     "test": "jest",
     "test:ci": "jest --runInBand",
     "test:watch": "yarn test --watch",
-    "start": "next start"
+    "start": "next start",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "husky": {
     "hooks": {
@@ -39,6 +40,10 @@
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-typescript": "^7.14.5",
+    "@graphql-codegen/add": "^2.0.2",
+    "@graphql-codegen/cli": "1.21.6",
+    "@graphql-codegen/typescript": "1.22.4",
+    "@graphql-codegen/typescript-operations": "1.18.3",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^12.0.0",
     "@types/jest": "^26.0.23",
