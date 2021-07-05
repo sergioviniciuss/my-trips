@@ -34,3 +34,6 @@ jobs:
 
       - name: Build
         run: yarn build
+        env:
+          GRAPHQL_HOST: ${{ secrets.GRAPHQL_HOST }}
+          GRAPHQL_TOKEN: ${{ secrets.GRAPHQL_TOKEN }}
