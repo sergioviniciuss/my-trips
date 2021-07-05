@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { CloseOutline } from "@styled-icons/evaicons-outline"
 import LinkWrapper from "components/LinkWrapper"
 import * as S from './styles'
@@ -32,7 +33,10 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
           <S.Body dangerouslySetInnerHTML={{ __html: place.description.html }} />
 
           <S.Gallery>
-            {place.gallery.map((image, index) => <img key={`photo-${index}`} src={image.url} alt={place.name} />)}
+            {place.gallery.map((image, index) => (
+              <Image key={`photo-${index}`} src={image.url} alt={place.name} width={1000} height={600} quality={75} />
+            )
+            )}
           </S.Gallery>
         </S.Container>
       </S.Wrapper>
