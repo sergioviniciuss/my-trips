@@ -15,7 +15,7 @@ export default function Page( { heading, body }: PageTemplateProps) {
 }
 
 export const getStaticPaths = async () => {
-  const { pages } = await client.request<GetPagesQuery>(GET_PAGES, { first: 3 })
+  const { pages } = await client.request<GetPagesQuery>(GET_PAGES, { first: 10 })
 
   const paths = pages.map(({ slug }) => ( {
     params: { slug }
