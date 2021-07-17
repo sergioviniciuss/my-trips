@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://my-trips-gamma.vercel.app/
+
+# Sitemaps
+Sitemap: https://my-trips-gamma.vercel.app/sitemap.xml
