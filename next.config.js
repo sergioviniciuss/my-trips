@@ -9,6 +9,6 @@ module.exports = withPWA({
     disable: !isProd // avoid service worker not updating issues while developing
   },
   images: {
-    domains: ['media.graphcms.com']
+    domains: ['media.graphassets.com.']
   }
 })
