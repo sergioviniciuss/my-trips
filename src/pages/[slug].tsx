@@ -21,18 +21,18 @@ export const getStaticPaths = async () => {
     params: { slug }
   }))
 
-  return { paths, fallback: true }
-
+  return { paths, fallback: 'blocking' }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { page } = await client.request<GetPageBySlugQuery>(GET_PAGES_BY_SLUG, { 
+  const { page } = await client.request<GetPageBySlugQuery>(GET_PAGES_BY_SLUG, {
     slug: `${params?.slug}`
   })
-  
+
   if (!page) return { notFound: true }
 
   return {
+    revalidate: 60,
     props: {
       heading: page.heading,
       body: page.body.html
