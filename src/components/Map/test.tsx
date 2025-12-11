@@ -6,7 +6,7 @@ describe('<Map />', () => {
         render(<Map />)
         // screen.logTestingPlaygroundURL()
         expect(screen.getByRole('link', {
-            name: /a js library for interactive maps/i
+            name: /a javascript library for interactive maps/i
         })).toBeInTheDocument()
     })
 
